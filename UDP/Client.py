@@ -19,8 +19,8 @@ try:
     print('sending "%s"' % message, file=sys.stderr)
     sent = sock.sendto(message.encode('utf-8'), server_address)
 
-    clock_start = time.clock()
-    time_start = time.time()
+    clock_start = time.process_time()
+    time_start = time.process_time()
 
     # Receive response
     print('waiting to receive', file=sys.stderr)
@@ -32,8 +32,8 @@ finally:
     sock.close()
 
 #fim do calculo
-clock_end = time.clock()
-time_end = time.time()
+clock_end = time.process_time()
+time_end = time.process_time()
 
 
 #duração do envio
