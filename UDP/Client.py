@@ -16,19 +16,19 @@ time_start = 0
 try:
 
     # Send data
-    print('sending "%s"' % message, file=sys.stderr)
+    print('Enviando "%s"' % message, file=sys.stderr)
     sent = sock.sendto(message.encode('utf-8'), server_address)
 
     clock_start = time.process_time()
     time_start = time.process_time()
 
     # Receive response
-    print('waiting to receive', file=sys.stderr)
+    print('Esperando receber', file=sys.stderr)
     data, server = sock.recvfrom(4096)
-    print('received "%s"' % data, file=sys.stderr)
+    print('Recebido "%s"' % data, file=sys.stderr)
 
 finally:
-    print('closing socket', file=sys.stderr)
+    print('Fechando Socket', file=sys.stderr)
     sock.close()
 
 #fim do calculo
@@ -38,7 +38,7 @@ time_end = time.process_time()
 
 #duração do envio
 duration_clock = clock_end - clock_start
-print ('clock:  duration_clock = ', duration_clock)
+print ('duração do relogio', duration_clock)
 
 duration_time = time_end - time_start
-print ('time:  duration_time = ', duration_time)
+print ('tempo de duração =  ', duration_time)

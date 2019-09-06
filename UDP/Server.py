@@ -13,10 +13,10 @@ sock.bind(server_address)
 
 # Receive message through recvfrom
 while True:
-    print('\nwaiting to receive message', file=sys.stderr)
+    print('\nEsperando pra Receber Mensagem', file=sys.stderr)
     data, address = sock.recvfrom(4096)
 
-    print('received %s bytes from %s' % (len(data), address), file=sys.stderr)
+    print('Recebeu %s bytes de %s' % (len(data), address), file=sys.stderr)
     print(data, file=sys.stderr)
 
     if data:
