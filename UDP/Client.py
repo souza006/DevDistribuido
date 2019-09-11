@@ -5,7 +5,7 @@ import time
 # Create a UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-server_address = ('localhost', 30000)
+server_address = ('10.128.0.2', 30512)
 message = 'This is the message.  It will be repeated.'
 
 #inicio do calculo
