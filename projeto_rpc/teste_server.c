@@ -15,7 +15,9 @@ fatorial_1_svc(operands *argp, struct svc_req *rqstp)
 	 * insert server code here
 	 */
 
-	printf("olá RPC\n");
+	
 
 	return &result;
+
+	printf("Funfou");
 }
