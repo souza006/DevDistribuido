@@ -4,7 +4,7 @@
  * as a guideline for developing your own functions.
  */
 
-#include "calc.h"
+#include "teste.h"
 
 int *
 fatorial_1_svc(operands *argp, struct svc_req *rqstp)
@@ -14,6 +14,19 @@ fatorial_1_svc(operands *argp, struct svc_req *rqstp)
 	/*
 	 * insert server code here
 	 */
-	result = printf("Funfou");
+	printf("Ola RPC\n");
+	return &result;
+}
+
+int *
+soma_1_svc(operands *argp, struct svc_req *rqstp)
+
+{
+	static int  result;
+	int a = argp- 
+	/*
+	 * insert server code here
+	 */
+	printf("Ola RPC\n");
 	return &result;
 }

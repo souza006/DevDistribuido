@@ -16,6 +16,7 @@ extern "C" {
 
 struct operands {
 	int x;
+	int z;
 };
 typedef struct operands operands;
 
@@ -23,15 +24,51 @@ typedef struct operands operands;
 #define SIMP_VERSION 1
 
 #if defined(__STDC__) || defined(__cplusplus)
-#define fatorial 1
-extern  int * fatorial_1(operands *, CLIENT *);
-extern  int * fatorial_1_svc(operands *, struct svc_req *);
+#define soma 1
+extern  int * soma_1(operands *, CLIENT *);
+extern  int * soma_1_svc(operands *, struct svc_req *);
+#define subtracao 2
+extern  int * subtracao_1(operands *, CLIENT *);
+extern  int * subtracao_1_svc(operands *, struct svc_req *);
+#define divisao 3
+extern  int * divisao_1(operands *, CLIENT *);
+extern  int * divisao_1_svc(operands *, struct svc_req *);
+#define multiplicacao 4
+extern  int * multiplicacao_1(operands *, CLIENT *);
+extern  int * multiplicacao_1_svc(operands *, struct svc_req *);
+#define maior 5
+extern  int * maior_1(operands *, CLIENT *);
+extern  int * maior_1_svc(operands *, struct svc_req *);
+#define menor 6
+extern  int * menor_1(operands *, CLIENT *);
+extern  int * menor_1_svc(operands *, struct svc_req *);
+#define porcentagem 7
+extern  int * porcentagem_1(operands *, CLIENT *);
+extern  int * porcentagem_1_svc(operands *, struct svc_req *);
 extern int simp_prog_1_freeresult (SVCXPRT *, xdrproc_t, caddr_t);
 
 #else /* K&R C */
-#define fatorial 1
-extern  int * fatorial_1();
-extern  int * fatorial_1_svc();
+#define soma 1
+extern  int * soma_1();
+extern  int * soma_1_svc();
+#define subtracao 2
+extern  int * subtracao_1();
+extern  int * subtracao_1_svc();
+#define divisao 3
+extern  int * divisao_1();
+extern  int * divisao_1_svc();
+#define multiplicacao 4
+extern  int * multiplicacao_1();
+extern  int * multiplicacao_1_svc();
+#define maior 5
+extern  int * maior_1();
+extern  int * maior_1_svc();
+#define menor 6
+extern  int * menor_1();
+extern  int * menor_1_svc();
+#define porcentagem 7
+extern  int * porcentagem_1();
+extern  int * porcentagem_1_svc();
 extern int simp_prog_1_freeresult ();
 #endif /* K&R C */
 

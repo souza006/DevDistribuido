@@ -20,7 +20,13 @@ static void
 simp_prog_1(struct svc_req *rqstp, register SVCXPRT *transp)
 {
 	union {
-		operands fatorial_1_arg;
+		operands soma_1_arg;
+		operands subtracao_1_arg;
+		operands divisao_1_arg;
+		operands multiplicacao_1_arg;
+		operands maior_1_arg;
+		operands menor_1_arg;
+		operands porcentagem_1_arg;
 	} argument;
 	char *result;
 	xdrproc_t _xdr_argument, _xdr_result;
@@ -31,10 +37,46 @@ simp_prog_1(struct svc_req *rqstp, register SVCXPRT *transp)
 		(void) svc_sendreply (transp, (xdrproc_t) xdr_void, (char *)NULL);
 		return;
 
-	case fatorial:
+	case soma:
 		_xdr_argument = (xdrproc_t) xdr_operands;
 		_xdr_result = (xdrproc_t) xdr_int;
-		local = (char *(*)(char *, struct svc_req *)) fatorial_1_svc;
+		local = (char *(*)(char *, struct svc_req *)) soma_1_svc;
+		break;
+
+	case subtracao:
+		_xdr_argument = (xdrproc_t) xdr_operands;
+		_xdr_result = (xdrproc_t) xdr_int;
+		local = (char *(*)(char *, struct svc_req *)) subtracao_1_svc;
+		break;
+
+	case divisao:
+		_xdr_argument = (xdrproc_t) xdr_operands;
+		_xdr_result = (xdrproc_t) xdr_int;
+		local = (char *(*)(char *, struct svc_req *)) divisao_1_svc;
+		break;
+
+	case multiplicacao:
+		_xdr_argument = (xdrproc_t) xdr_operands;
+		_xdr_result = (xdrproc_t) xdr_int;
+		local = (char *(*)(char *, struct svc_req *)) multiplicacao_1_svc;
+		break;
+
+	case maior:
+		_xdr_argument = (xdrproc_t) xdr_operands;
+		_xdr_result = (xdrproc_t) xdr_int;
+		local = (char *(*)(char *, struct svc_req *)) maior_1_svc;
+		break;
+
+	case menor:
+		_xdr_argument = (xdrproc_t) xdr_operands;
+		_xdr_result = (xdrproc_t) xdr_int;
+		local = (char *(*)(char *, struct svc_req *)) menor_1_svc;
+		break;
+
+	case porcentagem:
+		_xdr_argument = (xdrproc_t) xdr_operands;
+		_xdr_result = (xdrproc_t) xdr_int;
+		local = (char *(*)(char *, struct svc_req *)) porcentagem_1_svc;
 		break;
 
 	default:

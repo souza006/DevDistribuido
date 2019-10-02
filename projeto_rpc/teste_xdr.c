@@ -12,5 +12,7 @@ xdr_operands (XDR *xdrs, operands *objp)
 
 	 if (!xdr_int (xdrs, &objp->x))
 		 return FALSE;
+	 if (!xdr_int (xdrs, &objp->z))
+		 return FALSE;
 	return TRUE;
 }

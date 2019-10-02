@@ -7,17 +7,79 @@
 #include "teste.h"
 
 int *
-fatorial_1_svc(operands *argp, struct svc_req *rqstp)
+soma_1_svc(operands *argp, struct svc_req *rqstp)
 {
 	static int  result;
 
-	/*
-	 * insert server code here
-	 */
+	result = (*argp).x + (*argp).z;
+	return &result;
+}
 
-	
+int *
+subtracao_1_svc(operands *argp, struct svc_req *rqstp)
+{
+	static int  result;
+
+
+	result = (*argp).x - (*argp).z;
+	return &result;
+}
+
+int *
+divisao_1_svc(operands *argp, struct svc_req *rqstp)
+{
+	static int  result;
+
+
+	result = (*argp).x / (*argp).z;
+	return &result;
+}
+
+int *
+multiplicacao_1_svc(operands *argp, struct svc_req *rqstp)
+{
+	static int  result;
+
+	result = (*argp).x * (*argp).z;
+	return &result;
+}
+
+int *
+maior_1_svc(operands *argp, struct svc_req *rqstp)
+{
+	static int  result;
+
+	if ((*argp).x > (*argp).z){
+		result = (*argp).x;
+	} else {
+		result = (*argp).z;	
+	}
 
 	return &result;
+}
 
-	printf("Funfou");
+int *
+menor_1_svc(operands *argp, struct svc_req *rqstp)
+{
+	static int  result;
+
+	if ((*argp).x < (*argp).z){
+		result = (*argp).x;
+	} else {
+		result = (*argp).z;	
+	}
+
+
+	return &result;
+}
+
+int *
+porcentagem_1_svc(operands *argp, struct svc_req *rqstp)
+{
+	static int  result;
+
+	result = ((*argp).x * (*argp).z) / 100.0;
+
+
+	return &result;
 }
