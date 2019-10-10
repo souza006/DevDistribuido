@@ -17,7 +17,7 @@ import javax.swing.ImageIcon;
 
 public class Cliente extends javax.swing.JFrame {
 
-    int porta = 1234;
+    int porta = 2137;
     String endereco = "localhost";
     InputStream inStream;
     Socket socket = new Socket(endereco, porta);
@@ -29,8 +29,8 @@ public class Cliente extends javax.swing.JFrame {
         int size = ByteBuffer.wrap(tamanho).asIntBuffer().get();
         byte[] tamanhoImagem = new byte[size];
         inputStream.read(tamanhoImagem);
-        BufferedImage escudo = ImageIO.read(new ByteArrayInputStream(tamanhoImagem));
-        Image dimg = escudo.getScaledInstance(imageFrame.getWidth(), imageFrame.getHeight(),
+        BufferedImage carta = ImageIO.read(new ByteArrayInputStream(tamanhoImagem));
+        Image dimg = carta.getScaledInstance(imageFrame.getWidth(), imageFrame.getHeight(),
         Image.SCALE_SMOOTH);
         ImageIcon imageIcon = new ImageIcon(dimg);
         imageFrame.setIcon(imageIcon);

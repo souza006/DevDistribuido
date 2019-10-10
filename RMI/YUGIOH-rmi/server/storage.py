@@ -3,21 +3,21 @@ import Pyro4
 @Pyro4.expose
 class Storage(object):
     def __init__(self):
-        self.stored_digimons = {}
+        self.stored_cartas = {}
 
-    def store(self, digiescolhido, digimon):
-        if not digiescolhido in self.stored_digimons: 
-            self.stored_digimons[digiescolhido] = []
-        digimons = self.stored_digimons[digiescolhido]
-        digimons.append(digimon)
-        self.stored_digimons[digiescolhido] = digimons
+    def store(self, duelista, carta):
+        if not duelista in self.stored_cartas: 
+            self.stored_cartas[duelista] = []
+        cartas = self.stored_cartas[duelista]
+        cartas.append(carta)
+        self.stored_cartas[duelista] = cartas
 
-    def retrieve(self, digiescolhido, digimon):
-        digimons = self.stored_digimons[digiescolhido]
-        digimons.remove(digimon)
+    def retrieve(self, duelista, carta):
+        cartas = self.stored_cartas[duelista]
+        cartas.remove(carta)
 
-    def listStoredDigimons(self, digiescolhido):
-        digimons = []
-        if digiescolhido in self.stored_digimons.keys():
-            digimons = self.stored_digimons[digiescolhido]
-        return digimons
+    def listStoredCartas(self, duelista):
+        cartas = []
+        if duelista in self.stored_cartas.keys():
+            cartas = self.stored_cartas[duelista]
+        return cartas

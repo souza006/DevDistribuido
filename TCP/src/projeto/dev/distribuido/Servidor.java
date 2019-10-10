@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 
 
 public class Servidor{
-    int porta = 1234;
+    int porta = 2137;
     String mensagem = "";
     public Servidor() throws IOException{
         System.out.println("Servidor Rodando");
@@ -25,6 +25,7 @@ public class Servidor{
         outputstream.write("Servidor ta funcionando".getBytes());
 
         while(true){
+        	System.out.println("teste");
             InputStream inStream = socket.getInputStream();
             byte[] bytte = new byte[1000];
             inStream.read(bytte);
@@ -33,8 +34,8 @@ public class Servidor{
             
             System.out.println(resposta);
             
-            BufferedImage carta = ImageIO.read(new File("C:/Users/20172014040027/Desktop/DevDistribuido/TCP/src/Servidor/"+ resposta.trim().toLowerCase()+".jpg"));
-       
+            BufferedImage carta = ImageIO.read(new File("/home/elvis/"+ resposta.trim().toLowerCase()+".jpg"));
+            System.out.println(carta);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             ImageIO.write(carta, "jpg", baos);
             

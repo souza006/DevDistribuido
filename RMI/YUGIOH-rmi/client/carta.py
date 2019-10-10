@@ -1,4 +1,4 @@
-class Digimon(object):
+class Carta(object):
     def __init__(self, name, type_p):
         self.name = name
         self.type_p = type_p
