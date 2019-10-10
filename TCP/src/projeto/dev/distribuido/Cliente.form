@@ -94,7 +94,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Digite o nome deum time do Rio de Janeiro"/>
+            <Property name="text" type="java.lang.String" value="Digite o nome de uma das seguintes Cartas: Blue Eyes; Red Eyes; Dark Magician; Exodia."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnSearchImage">

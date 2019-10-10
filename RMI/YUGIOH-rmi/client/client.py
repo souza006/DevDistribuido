@@ -1,6 +1,6 @@
 import sys
-from digimon import Digimon
-from digiescolhido import Digiescolhido
+from digimon import Digimon = Carta
+from digiescolhido import Digiescolhido  = Duelista ; digivice = deck
 import Pyro4
 import Pyro4.util
 
@@ -8,11 +8,11 @@ sys.excepthook = Pyro4.util.excepthook
 
 def main():
     # test setup
-    storage = Pyro4.Proxy("PYRONAME:digivice.storage")
+    storage = Pyro4.Proxy("PYRONAME:deck.storage")
     cod = 2
-    tk = Digiescolhido(1, "TK")
-    patamon = Digimon("Patamon", "Wind")
-    angemon = Digimon("Angemon", "")
+    yugi = Duelista(1, "TK")
+    buster = Carta("Buster", "Monstro")
+    magician = Digimon("Magician", "Mago")
     tk.scan(patamon, storage)
     tk.scan(angemon, storage)
     mestres = []

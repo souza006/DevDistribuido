@@ -33,10 +33,10 @@ public class Servidor{
             
             System.out.println(resposta);
             
-            BufferedImage escudo = ImageIO.read(new File("C:/Users/Administrador/Desktop/projeto-dev-distribuido/src/Servidor/"+ resposta.trim().toLowerCase()+".jpg"));
+            BufferedImage carta = ImageIO.read(new File("C:/Users/20172014040027/Desktop/DevDistribuido/TCP/src/Servidor/"+ resposta.trim().toLowerCase()+".jpg"));
        
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            ImageIO.write(escudo, "jpg", baos);
+            ImageIO.write(carta, "jpg", baos);
             
             byte[] size = ByteBuffer.allocate(4).putInt(baos.size()).array();
             outputstream.write(size);

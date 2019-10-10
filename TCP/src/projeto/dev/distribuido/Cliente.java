@@ -38,7 +38,7 @@ public class Cliente extends javax.swing.JFrame {
 
     public Cliente() throws IOException {
         initComponents();
-        System.out.println("Ta tudo rodando"); 
+        System.out.println("Cliente Ligado"); 
         byte[] bytte = new byte[1000];
         inputStream.read(bytte);
         String mensagem = new String(bytte);
@@ -61,7 +61,7 @@ public class Cliente extends javax.swing.JFrame {
 
         inputImageName.setToolTipText("Search image");
 
-        jLabel1.setText("Digite o nome deum time do Rio de Janeiro");
+        jLabel1.setText("Digite o nome de uma das seguintes Cartas: Blue Eyes; Red Eyes; Dark Magician; Exodia.");
 
         btnSearchImage.setText("Buscar");
         btnSearchImage.setToolTipText("Search");
