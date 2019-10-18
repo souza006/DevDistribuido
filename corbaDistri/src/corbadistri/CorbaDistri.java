@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package corbadistri;
+import OlaApp.OlaHelper;
+import org.omg.CORBA.ORB;
+import org.omg.CosNaming.NamingContextExtHelper;
+import org.omg.PortableServer.POA;
+import org.omg.PortableServer.POAHelper;
 
 /**
  *
