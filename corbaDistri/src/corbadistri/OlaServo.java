@@ -1,10 +1,12 @@
+package corbadistri;
+
 
 import OlaApp.OlaPOA;
 import org.omg.CORBA.ORB;
 
 public class OlaServo extends OlaPOA {
 	String msg = "\n Ola Teste\n";
-	private ORB orb;
+	private org.omg.CORBA.ORB orb;
 	
 	public void setORB(ORB orb_val) {
 		orb = orb_val;
