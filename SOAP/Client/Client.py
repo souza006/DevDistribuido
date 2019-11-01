@@ -1,8 +1,11 @@
 from zeep import Client
 
+#Cria Classe Pokemon
+
 class Pokemon
     pass
 
+#Define os atributos da classe e solicita os mesmos
 def novoPokemon():
     poke = Pokemon()
     poke.nome = input('Digite o Nome do Pokémon: ')
@@ -11,7 +14,11 @@ def novoPokemon():
     return poke
 
     def main():
-        clien = Client('http://localhost:8001/pokedex')
+
+    	#
+
+
+        client = Client('http://localhost:8001/pokedex')
         print('** Criador de Equipe Pokémon **')
         while True:
             print('\n Escolha uma das seguintes opções: ')
@@ -21,12 +28,12 @@ def novoPokemon():
             op = input('> ')
             if op == '1':
                 pokemon = novoPokemon()
-                client.service.inserePokemon(
+                client.service.insereParty(
                     poke.nome, poke.nick, poke.numDex
                 )
             
             elif op == '2':
-                listar = client.service.retornaPokemon()
+                listar = client.service.retornaParty()
                 for pokemon in listar:
                     print('#####')
                     print('Numero Dex: ', pokemon.numDex)
