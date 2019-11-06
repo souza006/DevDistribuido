@@ -9,20 +9,22 @@ package soapserver.webservice;
  *
  * @author 20172014040027
  */
-
+import javax.jws.WebService;
 import java.util.List;
+import soapmodels.dao.pokemonDAO;
+import soapserver.models.Pokemon;
 
 
 @WebService(endpointInterface = "soapserver.webService.PkmServer")
 public class Party_ServerImpl implements PkmServer {
    
     /* chama a classe pokemonDAO e instancia novo objeto*/
-    private PokemonDAO pokemonDAO = new PokemonDAO();
+    private pokemonDAO pokemonDAO = new pokemonDAO();
    
     /* chama o metodo retornaParty para chamar a lista de objetos*/
 
    @Override
-   public List<Pokemon> retornaParty(){
+   public List<Pokemon> retornaPokemons(){
        return pokemonDAO.listaPokemons();
    }
     /* chama a classe pokemonDAO e chama a lista de objetos*/
