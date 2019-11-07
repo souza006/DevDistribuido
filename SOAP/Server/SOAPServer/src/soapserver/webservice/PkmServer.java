@@ -11,23 +11,19 @@ package soapserver.webservice;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
-import javax.jws.soap.SOAPBinding;
-import javax.jws.soap.SOAPBinding.Style;
-
 /**
  *
  * @author 20172014040027
  */
 
+
 @WebService
-
-@SOAPBinding(style = Style.RPC)
-
 public interface PkmServer {
     
     
-    /**Chama o metodo retornaParty e os pokemons na party para o client **/
-    @WebMethod 
+    /**Chama o metodo retornaParty e os pokemons na party para o client
+    **/
+   @WebMethod 
    public List<Pokemon> retornaParty();
    /**Chama o metodo inserePokemon e insere os dados lidos no client **/
    @WebMethod
