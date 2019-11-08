@@ -11,6 +11,7 @@ package soapserver.webservice;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
+import soapserver.models.Pokemon;
 /**
  *
  * @author 20172014040027

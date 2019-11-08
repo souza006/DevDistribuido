@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
 import soapmodels.dao.pokemonDAO;
+import soapserver.models.Pokemon;
 
 
 @WebService(endpointInterface = "soapserver.webService.PkmServer")
