@@ -5,7 +5,7 @@
  */
 package soapserver.webservice;
 
-import java.util.ArrayList;
+
 import java.util.List;
 import javax.jws.WebService;
 import soapmodels.dao.pokemonDAO;

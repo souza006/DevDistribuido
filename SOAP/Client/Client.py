@@ -13,7 +13,7 @@ def novoPokemon():
     return poke
 
 def main():
-	client = Client('http://localhost:8089/pokemon?wsdl')
+	client = Client('http://localhost:8082/pokemon?wsdl')
         print('** Criador de Equipe Pokemon **')
         while True:
             print('\n Escolha uma das seguintes opcoes: ')
