@@ -13,7 +13,7 @@ def novoPokemon():
     return poke
 
 def main():
-	client = Client('http://localhost:8082/pokemon?wsdl')
+	client = Client('http://localhost:8083/pokemon?wsdl')
         print('** Criador de Equipe Pokemon **')
         while True:
             print('\n Escolha uma das seguintes opcoes: ')
@@ -23,7 +23,7 @@ def main():
             op = raw_input('> ')
             if op == 'i':
                 poke = novoPokemon()
-                client.service.insereParty(
+                client.service.inserePokemon(
                     poke.nome, poke.nick, poke.numDex
                 )
             

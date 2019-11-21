@@ -12,7 +12,7 @@ import soapmodels.dao.pokemonDAO;
 import soapserver.models.Pokemon;
 
 
-@WebService(endpointInterface = "soapserver.webService.PkmServer")
+@WebService(endpointInterface = "soapserver.webservice.PkmServer")
 public class PkmServerImpl implements PkmServer {
    
     /* chama a classe pokemonDAO e instancia novo objeto*/
