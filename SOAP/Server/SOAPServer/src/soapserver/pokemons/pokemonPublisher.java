@@ -14,6 +14,6 @@ import soapserver.webservice.PkmServerImpl;
  */
 public class pokemonPublisher {
     public static void main(String[] args){
-        Endpoint.publish("http://localhost:8082/pokemon?wsdl", new PkmServerImpl());
+        Endpoint.publish("http://localhost:8083/pokemon?wsdl", new PkmServerImpl());
     }
 }

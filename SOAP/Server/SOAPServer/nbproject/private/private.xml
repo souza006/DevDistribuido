@@ -3,11 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/20172014040027/Desktop/DevDistribuido/SOAP/Server/SOAPServer/src/soapserver/webservice/PkmServer.java</file>
-            <file>file:/C:/Users/20172014040027/Desktop/DevDistribuido/SOAP/Server/SOAPServer/src/soapmodels/dao/pokemonDAO.java</file>
-            <file>file:/C:/Users/20172014040027/Desktop/DevDistribuido/SOAP/Server/SOAPServer/src/soapserver/models/Pokemon.java</file>
-            <file>file:/C:/Users/20172014040027/Desktop/DevDistribuido/SOAP/Server/SOAPServer/src/soapserver/webservice/PkmServerImpl.java</file>
-            <file>file:/C:/Users/20172014040027/Desktop/DevDistribuido/SOAP/Server/SOAPServer/src/soapserver/pokemons/pokemonPublisher.java</file>
+            <file>file:/C:/Users/elvis/Desktop/DevDistribuido/SOAP/Server/SOAPServer/src/soapserver/webservice/SOAPServer.java</file>
+            <file>file:/C:/Users/elvis/Desktop/DevDistribuido/SOAP/Server/SOAPServer/src/soapserver/pokemons/pokemonPublisher.java</file>
         </group>
     </open-files>
 </project-private>
