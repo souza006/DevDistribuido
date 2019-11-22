@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Champion extends Model
+class Pokemon extends Model
 {
     protected $fillable = [
-        'nome', 'tipo', 'terraNatal',
+        'nome', 'nick', 'tipo', 'lv',
     ];
-
 }
