@@ -1,9 +1,8 @@
 <?php
 
 
-Route::apiResource('pokemons','PokemonController');
 
 
-/**Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-}); **/
+});

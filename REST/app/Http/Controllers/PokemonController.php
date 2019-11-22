@@ -18,14 +18,15 @@ class PokemonController extends Controller
     }
     public function show($id)
     {
-        //
+        return Pokemon::findOrfail($id);
     }
     public function update(Request $request, $id)
     {
-        //
+        $pokemon = Pokemon::findOrfail($id);
+        $pokemon->update($request->all());
     }
     public function destroy($id)
     {
-        //
+      
     }
 }
